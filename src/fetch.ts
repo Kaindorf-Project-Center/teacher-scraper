@@ -1,5 +1,5 @@
 import { JSDOM } from 'jsdom';
-import {ITeacher} from "./models/Teacher";
+import {ITeacher} from "./models/ITeacher";
 
 function extractTitleAndName(nameElement: HTMLAnchorElement): string[]
 {
