@@ -1,6 +1,7 @@
 *.js
 node_modules/
 .idea/
+.DS_Store
 
 # Logs
 logs
