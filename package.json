@@ -1,12 +1,25 @@
 {
   "name": "kd-teacher-scraper",
   "version": "1.0.0",
-  "main": "main.js",
+  "description": "Fetch all publicly available data of your favourite teachers from HTBLA Kaindorf!",
+  "main": "dist/main.js",
   "license": "MIT",
   "scripts": {
-    "start": "node src/main.js"
+    "start": "node dist/main.js",
+    "build": "tsc"
   },
   "dependencies": {
-    "jsdom": "^24.0.0"
-  }
+    "@types/jsdom": "^21.1.7",
+    "jsdom": "^24.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haicha21/kd-teacher-scraper.git"
+  },
+  "keywords": ["Kaindorf", "HTBLA"],
+  "author": "Christopher Haindl",
+  "bugs": {
+    "url": "https://github.com/haicha21/kd-teacher-scraper/issues"
+  },
+  "homepage": "https://github.com/haicha21/kd-teacher-scraper#readme"
 }
