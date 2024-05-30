@@ -12,7 +12,7 @@ function extractTitleAndName(nameElement: Element): string[]
     return [prefix, contents[prefix === "" ? 1 : 2], contents[prefix === "" ? 2 : 3]]
 }
 
-export async function getTeachersOfKaindorf(): Promise<ITeacher[]> {
+async function getTeachersOfKaindorf(): Promise<ITeacher[]> {
     return await fetch("https://www.htl-kaindorf.at/schule/team")
         .then((res: Response) => res.text())
         .then((html: string) => new JSDOM(html))
@@ -64,3 +64,5 @@ export async function getTeachersOfKaindorf(): Promise<ITeacher[]> {
             return teachers
         })
 }
+
+export default getTeachersOfKaindorf
