@@ -8,9 +8,10 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "yarn build"
+    "prepare": "tsc",
+    "prepack": "tsc"
   },
-  "devDpendencies": {
+  "dpendencies": {
     "@types/jsdom": "^21.1.7",
     "jsdom": "^24.1.0"
   },
