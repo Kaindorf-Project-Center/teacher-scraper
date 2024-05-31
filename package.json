@@ -8,8 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "prepack": "tsc",
-    "prepare": "tsc"
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
     "@types/jsdom": "^21.1.7",
