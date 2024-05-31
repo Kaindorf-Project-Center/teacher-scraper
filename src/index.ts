@@ -1,5 +1,6 @@
-import { JSDOM } from 'jsdom';
 import {ITeacher} from "./models/ITeacher";
+
+const jsdom = require("jsdom");
 
 function extractTitleAndName(nameElement: Element): string[]
 {
@@ -15,8 +16,8 @@ function extractTitleAndName(nameElement: Element): string[]
 async function getTeachersOfKaindorf(): Promise<ITeacher[]> {
     return await fetch("https://www.htl-kaindorf.at/schule/team")
         .then((res: Response) => res.text())
-        .then((html: string) => new JSDOM(html))
-        .then((dom: JSDOM) => {
+        .then((html: string) => new jsdom.JSDOM(html))
+        .then((dom) => {
             const teachers: ITeacher[] = []
 
             const root = dom.window.document.body.getElementsByTagName("section")[0]
