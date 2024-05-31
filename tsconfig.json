@@ -6,7 +6,9 @@
     "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
-    "module": "commonjs"
+    "module": "commonjs",
+    "declaration": true,
+    "declarationDir": "./dist"
   },
   "include": ["src/**/*"],
 }
