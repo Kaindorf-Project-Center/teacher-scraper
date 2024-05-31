@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Fetch all publicly available data of your favourite teachers from HTBLA Kaindorf!",
   "main": "dist/kd-teacher-scraper.js",
-  "types": "src/kd-teacher-scraper.d.js",
-  "module": "dist/index.js",
+  "module": "dist/kd-teacher-scraper.js",
+  "types": "src/kd-teacher-scraper.d.ts",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
