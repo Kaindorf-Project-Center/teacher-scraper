@@ -11,15 +11,14 @@
     "prepare": "tsc",
     "prepack": "tsc"
   },
-  "dependencies": {
-    "@types/jsdom": "^21.1.7",
-    "jsdom": "^24.1.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/haicha21/kd-teacher-scraper.git"
   },
-  "keywords": ["Kaindorf", "HTBLA"],
+  "keywords": [
+    "Kaindorf",
+    "HTBLA"
+  ],
   "author": "Christopher Haindl",
   "bugs": {
     "url": "https://github.com/haicha21/kd-teacher-scraper/issues"
