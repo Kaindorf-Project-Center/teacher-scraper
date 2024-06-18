@@ -7,7 +7,6 @@
     "esModuleInterop": true,
     "module": "commonjs",
     "declaration": true,
-    "declarationDir": "./dist"
   },
   "include": ["src/**/*"],
 }
