@@ -1,7 +1,5 @@
+import { JSDOM } from 'jsdom';
 import {ITeacher} from "./models/ITeacher";
-
-const url = 'https://www.htl-kaindorf.at/schule/team';
-const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 
 function extractTitleAndName(nameElement: Element): string[]
 {
@@ -15,15 +13,13 @@ function extractTitleAndName(nameElement: Element): string[]
 }
 
 async function getTeachersOfKaindorf(): Promise<ITeacher[]> {
-
-    await fetch("https://cors-anywhere.herokuapp.com/corsdemo?accessRequest=fdbfec3d1adcb07e65acd5b3b13cab26ea8a0eb4234de0be6d95d7c67006faab")
-    return await fetch(proxyUrl + url)
+    return await fetch("https://www.htl-kaindorf.at/schule/team")
         .then((res: Response) => res.text())
-        .then((html: string) => new DOMParser().parseFromString(html, "text/html"))
-        .then((dom) => {
+        .then((html: string) => new JSDOM(html))
+        .then((dom: JSDOM) => {
             const teachers: ITeacher[] = []
 
-            const root = dom.body.getElementsByTagName("section")[0]
+            const root = dom.window.document.body.getElementsByTagName("section")[0]
             const divs = root.children
             const teacherDivs: Element[] = Array.from(divs[divs.length - 1].children)
 
